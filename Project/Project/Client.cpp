@@ -10,10 +10,7 @@
             :User(name,surname ,age,password),
             client_ID(generateID())
     {}
-    //--------------------------------------------------------------------------------
-    //ПЕРЕДЕЛАТЬ КОНСТРУКТОРЫ КОПИРОВАНИЯ И ПЕРЕМЕШЕНИЯ ОНИ СКОРЕЕ ВСЕГО НЕ ВЕРНО РАБОТАЮТ
     
-    //--------------------------------------------------------------------------------
     void Client::show_info()  {
         std::cout << "Name: " << _name << "\n"<<"Surname: " << _surname <<"\n"<<"Age: "<< _age <<"\n"<<"Rating: " << _rating << "\n"<<"ID: " << client_ID  << "\n";
     }
@@ -35,7 +32,6 @@
     
 
 
-    //Запись и считывание из файла
     void Client::write_to_file(const std::string& file_name) const {
         std::ofstream out(file_name, std::ios::binary | std::ios::app);
 
